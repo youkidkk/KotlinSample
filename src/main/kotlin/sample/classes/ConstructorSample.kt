@@ -1,8 +1,9 @@
 package sample.classes
 
-class ConstructorSample(val number : Int, // val または var を指定すると、プロパティとなる
-             var text : String,
-             arg : String // 指定しなかった場合はプロパティとならず、フィールドの初期化に使用できる
+class ConstructorSample(
+            private val number : Int, // val または var を指定すると、プロパティとなる
+            var text : String, // private を指定しない場合は外部からアクセス可能となる
+            arg : String // 指定しなかった場合はプロパティとならず、フィールドの初期化に使用できる
     ) {
 
     // セカンダリーコンストラクタ
@@ -10,7 +11,7 @@ class ConstructorSample(val number : Int, // val または var を指定する�
     constructor(number : Int, text : String) : this(number, text, "")
 
     // コンストラクタの引数を使用して初期化が可能
-    val length = arg.length
+    private val length = arg.length
 
     fun print() {
         println("ConstructorSample : ")
@@ -23,8 +24,10 @@ class ConstructorSample(val number : Int, // val または var を指定する�
 
 fun main(args: Array<String>) {
     // プライマリーコンストラクタを使用
-    ConstructorSample(1, "Test", "Test Test Test").print()
+    ConstructorSample(1, "hoge", "fuga fuga").print()
 
     // セカンダリーコンストラクタを使用
-    ConstructorSample(2, "Test Test").print()
+    val sample = ConstructorSample(2, "piyo")
+    sample.text = "piyo piyo" // プロパティへのアクセス
+    sample.print()
 }
