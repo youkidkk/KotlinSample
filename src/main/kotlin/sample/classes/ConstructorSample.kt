@@ -1,8 +1,8 @@
 package sample.classes
 
-class ConstructorSample(val number : Int,  // valを指定すると、プロパティとなる
-             val text : String,
-             arg : String       // valを指定しなかった場合はプロパティとならず、フィールドの初期化に使用できる
+class ConstructorSample(val number : Int, // val または var を指定すると、プロパティとなる
+             var text : String,
+             arg : String // 指定しなかった場合はプロパティとならず、フィールドの初期化に使用できる
     ) {
 
     // セカンダリーコンストラクタ
