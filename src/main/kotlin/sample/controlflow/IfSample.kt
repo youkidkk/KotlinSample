@@ -1,4 +1,4 @@
-package controlflow.sample
+package sample.controlflow
 
 fun main(args: Array<String>) {
     val i : Int = 100

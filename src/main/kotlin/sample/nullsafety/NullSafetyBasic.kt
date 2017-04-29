@@ -1,4 +1,4 @@
-package nullsafety.sample
+package sample.nullsafety
 
 fun main(args: Array<String>) {
     // Nullable ではないため、以下はコンパイルエラーとなる

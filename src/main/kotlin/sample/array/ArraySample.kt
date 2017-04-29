@@ -1,4 +1,4 @@
-package array.sample
+package sample.array
 
 fun main(args: Array<String>) {
     // 配列の生成
