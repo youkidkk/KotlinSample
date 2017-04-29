@@ -19,9 +19,14 @@ fun main(args: Array<String>) {
 
 fun print(s : String?) {
     if (s != null) {
-        // if によるNullチェックを行っているため、参照できる
+        // if によるNullチェックを行っており、
+        // スマートキャストされ、直接参照できるようになる
         println("Var s is " + s)
     } else {
         println("Var s is null...")
     }
+
+    // 以下の記法でも同じ
+    // Nullだった場合のデフォルト値を設定する
+    println("Var s is " + (s ?: "null..."))
 }
