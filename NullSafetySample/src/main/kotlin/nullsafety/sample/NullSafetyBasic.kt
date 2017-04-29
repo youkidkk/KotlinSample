@@ -19,10 +19,9 @@ fun main(args: Array<String>) {
 
 fun print(s : String?) {
     if (s != null) {
-        // s が null ではない場合
+        // if によるNullチェックを行っているため、参照できる
         println("Var s is " + s)
     } else {
-        // s が null の場合
         println("Var s is null...")
     }
 }
