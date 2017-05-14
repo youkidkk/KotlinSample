@@ -2,30 +2,29 @@ package sample.nullsafety
 
 fun main(args: Array<String>) {
     // Nullable ではないため、以下はコンパイルエラーとなる
-    // var s : String = null
+    // var string: String = null
 
     // Nullable であるため、以下はOK
-    var s : String? = null
+    val string: String? = "String value"
+    val nullString: String? = null
 
     // Nullチェックを行わずに直接参照するとコンパイルエラーとなる
-    // println(s.length)
+    // println(string.length)
 
-    print(s)
+    // エルビス演算子 : デフォルト値を指定する
+    println(string ?: "default value") // -> stringの値となる
+    println(nullString ?: "default value") // -> "default value"となる
 
-    s = "not Null!!!"
-    print(s)
-}
+    // !!演算子 : NullableをNotNullに強制的に変換する
+    val value1 = string!!
+    println(value1) // -> "String value"
+    // 右辺がnullのため、以下は kotlin.KotlinNullPointerException がスローされる
+    // val value2 = nullString!!
 
-fun print(s : String?) {
-    if (s != null) {
-        // if によるNullチェックを行っており、
-        // スマートキャストされ、直接参照できるようになる
-        println("Var s is " + s)
-    } else {
-        println("Var s is null...")
-    }
-
-    // 以下の記法でも同じ
-    // Nullだった場合のデフォルト値を設定する
-    println("Var s is " + (s ?: "null..."))
+    // requireNotNull関数 : !!演算子と同様の動作
+    // 第一引数に対象の変数、第二引数にnullの場合の例外メッセージを指定する
+    val value3 = requireNotNull(string, { "Null value" })
+    println(value3) // -> "String value"
+    // 第一引数がnullのため、以下は java.lang.IllegalArgumentException がスローされる
+    // val value4 = requireNotNull(nullString, { "Null value" })
 }
