@@ -7,7 +7,7 @@ package sample.function
 
 /** 【型名】.【関数名】で宣言する。 */
 fun String.println() {
-    println(this + "!!!")
+    println("${this} !!!")
 }
 
 fun main(args: Array<String>) {
