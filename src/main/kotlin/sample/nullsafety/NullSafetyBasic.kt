@@ -4,7 +4,6 @@ fun main(args: Array<String>) {
     // Nullable ではないため、以下はコンパイルエラーとなる
     // var s : String = null
 
-
     // Nullable であるため、以下はOK
     var s : String? = null
 
