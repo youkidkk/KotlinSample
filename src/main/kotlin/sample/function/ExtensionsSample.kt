@@ -1,4 +1,4 @@
-package sample.function.extensions
+package sample.function
 
 /**
  * 拡張関数のサンプル。
