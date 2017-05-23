@@ -28,6 +28,8 @@ fun main(args: Array<String>) {
     funcList.add(func3)
 
     funcList.forEach {
-        println(it.invoke("hoge hoge hoge"))
+        // 呼び出しは it に直接引数を渡すか、
+        // it.invoke(...) とする
+        println(it("hoge hoge hoge"))
     }
 }
