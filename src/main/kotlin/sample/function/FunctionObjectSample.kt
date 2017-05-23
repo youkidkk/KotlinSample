@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     }
     funcList.add(func1)
 
-    // インライン関数１
+    // ラムダ式１
     // 型の指定は必須
     val func2 : (String) -> Int = { s ->
         // return は使用しない（外側のメソッドのリターンになってしまう）
@@ -20,7 +20,7 @@ fun main(args: Array<String>) {
     }
     funcList.add(func2)
 
-    // インライン関数２
+    // ラムダ式２
     // 引数を省略して it を使用する場合（引数が１つのみの場合に使用可）
     val func3 : (String) -> Int = {
         it.length
