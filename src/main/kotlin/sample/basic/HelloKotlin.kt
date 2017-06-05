@@ -1,4 +1,4 @@
-package sample.hello
+package sample.basic
 
 fun main(args: Array<String>) {
     val word = "Kotlin"

@@ -1,4 +1,4 @@
-package sample.array
+package sample.basic.array
 
 fun main(args: Array<String>) {
     // List の生成

@@ -1,4 +1,4 @@
-package sample.controlflow
+package sample.basic.controlflow
 
 fun main(args: Array<String>) {
     for (i in 1..20) {

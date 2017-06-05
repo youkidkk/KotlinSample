@@ -1,4 +1,4 @@
-package sample.function
+package sample.function.lambda
 
 /**
  * 関数オブジェクトサンプル。
