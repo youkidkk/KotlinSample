@@ -5,7 +5,7 @@ package sample.function.scope
  * インスタンスに対する複数の操作を完結に記述できる。
  */
 fun main(args: Array<String>) {
-    val sample = with(Sample()) {
+    val sample = with(WithSample()) {
         arg1 = "val 1"
         arg2 = "val 2"
         this
@@ -13,7 +13,7 @@ fun main(args: Array<String>) {
     println(sample)
 }
 
-class Sample() {
+private class WithSample() {
     var arg1: String = ""
     var arg2: String = ""
 

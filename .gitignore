@@ -12,6 +12,7 @@
 /**/.classpath
 /**/.project
 /**/gradlew*
+/**/*.iml
 /**/*~
 
 # ルート直下のサブディレクトリのみ
